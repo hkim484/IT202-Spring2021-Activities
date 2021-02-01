@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+  </head>
+  <body>
+    <h1>Form Basics</h1>
+       
+<!-- add a form element with an id and name of form1 -->
+       <form id = "form1">
+            <p>Please select color:</p>
+<!-- add a text input element with id and name of text1  -->
+            <input type = "text" id = "text1" name = "text1">       
+<!-- add a set of 3 radio buttons, with the name radio1 and value of 
+        red, green and blue-->
+            <br><br>
+            <input type = "radio" id = "red" name = "radio1" value = "red">
+            <label for="red">Red</label><br>
+            <input type = "radio" id = "green" name = "radio1" value = "green">
+            <label for="red">Green</label><br>            
+            <input type = "radio" id = "blue" name = "radio1" value = "blue">
+            <label for="red">Blue</label>
+            <br><br>
+<!-- add a select control with the name and id select1 and 3 options of
+             Mon, Wed, and Fri-->
+            <label for = "select1">Choose a date:</label>
+            <select name = "select1" id = "select1">
+                 <option value = "Mon">Mon</option>
+                 <option value = "Wed">Wed</option>
+                 <option value = "Fri">Fri</option>                 
+            </select>
+            <br><br>            
+<!-- add a textarea element with the name and id textarea1, with placeholder
+             Please provide any additional feedback-->
+            <textarea rows = "4" cols = "50" name = "textarea1">
+            Please provide any additional feedback</textarea>
+<!-- include some label text for each item    -->
+       </form> 
+
+
+    <p id="uptonSinclairQuote">
+It is difficult to get a man to understand something, when his salary depends upon his not understanding it! -- Upton Sinclair
+    </p>
+
+<button onclick = "myFunction()">
+     Press it
+       </button>
+    <script>
+<!--add a script block with commands to do the following:-->
+<!--1.set the value of the text input to your name-->
+           
+          function myFunction() {
+               document.querySelector("#text1").value = "Haeun Kim";
+
+          }
+                                                  
+
+           
+           
+<!--2. select the radio button with the value green-->
+           
+           
+           
+<!--3. set the value of the textarea element to be the quotation(byreading the 
+           value of the paragraph element)-->
+           
+           
+           
+<!--4. add a change event handler on the select control;
+           the function should log the selected value to the console-->
+<!--(we can write a selector for the checked/selected option in a select control:
+           select option: checked
+           The way to interpret that is 
+      find a checked option element that is the child of a select element
+           You can use an id selector instead of 
+           select in the above.  -->
+           
+                    
+           
+           
+
+    </script>
+  </body>
+</html>
