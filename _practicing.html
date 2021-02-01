@@ -18,38 +18,26 @@
   </head>
   <body>
 
-    <div id="images " onmouseover = "myFunction(event)" onmouseout = "return()">
+    <div id="images " onmouseover = "bigger()" onmouseout = "return()">
       <img src="https://picsum.photos/seed/a/200/300" alt="random image">
       <img src="https://picsum.photos/seed/b/200/300" alt="random image">
       <img src="https://picsum.photos/seed/c/200/300" alt="random image">
     </div>
 
+       <h3>onclick event</h3>
     <blockquote cite="https://quoteinvestigator.com/2014/05/27/rising/" onclick = "NewTab()"> 
 
       "The greatest glory in living lies not in never falling, but in rising every time we fall." -Nelson Mandela (and others) 
     </blockquote>
 
     <script>
-         
-         
-         //document.body.classList.add("bigger");
-         function myFunction(event) {
-              document.body.classList.add("bigger");
-              alert(event.currentTarget.nodeName);
-         }
-
-
-         
-         
+         //document.body.addEventListener("mouseover", () => alert("hello"));
+          //var image = document.getElementById("#images");
          function NewTab() {
-              window.open("https://quoteinvestigator.com/2014/05/27/rising/", "_blank"); }
+              window.open("https://quoteinvestigator.com/2014/05/27/rising/", "_blank");
+}
          
-//          let bigger = () => {
-//               width:400px; 
-//               height:600px;
-//          }
-        //document.body.addEventListener("mouseover", () => alert("hello"));
-        //var image = document.getElementById("#images");
+
 
 
     </script>
