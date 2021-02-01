@@ -11,16 +11,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
 
     <style>
-      .bigger {width:400px; height:600px;}
-
+      .bigger {
+           width:400px; 
+           height:600px;
+         }
          
-      blockquote {font-family: "Architects Daughter", Arial; font-size: 2em; }
+      blockquote {
+           font-family: "Architects Daughter", Arial; 
+           font-size: 2em; }
     </style>
 
   </head>
   <body>
 
-    <div id="images" onmouseover = "myFunction(event)" onmouseout = "return()">
+    <div id="images">
       <img src="https://picsum.photos/seed/a/200/300" alt="random image">
       <img src="https://picsum.photos/seed/b/200/300" alt="random image">
       <img src="https://picsum.photos/seed/c/200/300" alt="random image">
@@ -28,7 +32,8 @@
 
     <blockquote cite="https://quoteinvestigator.com/2014/05/27/rising/" onclick = "NewTab()"> 
 
-      "The greatest glory in living lies not in never falling, but in rising every time we fall." -Nelson Mandela (and others) 
+      "The greatest glory in living lies not in never falling, but in rising every time we fall." 
+         -Nelson Mandela (and others) 
     </blockquote>
 
     <script>
@@ -39,7 +44,16 @@
               document.body.classList.add("bigger");
               alert(event.currentTarget.nodeName);
          }
+         
+         
+         document.querySelector("blockquote").addEventListener("click", (e) => 
+         {window.open(e.target.cite, "_blank"); } );
 
+         [...document.querySelectorAll("img")].map((img) => 
+                { img.addEventListener("mouseover", () => { 
+                     img.classList.add("bigger");  }); 
+                 img.addEventListener("mouseout", () => { 
+                      img.classList.remove("bigger");  });   });
 
          
          
