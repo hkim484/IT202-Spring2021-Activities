@@ -11,18 +11,26 @@
     <title></title>
   </head>
   <body>
-    <div class="container">
+    <div class="container" >
     <h1></h1>
 
 
     <div class="row">
+         
       <div class="card" >
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
+          <h5 class="card-title name" >name_</h5>           
+             
+          <h6 class="card-subtitle mb-2 text-muted hours_of_operation" >hours_of_operation</h6>
+          <p1 class="card-text address" >address</p1>
+          <p class="card-text city state zip" >city</p>
+             
+             
+          
+             
+             
+          <p class="card-text phone" >phone</p>   
+          <a href="#" class="card-link website">Website</a>
         </div>
       </div>
 
@@ -36,8 +44,61 @@
 
 
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+     <script> 
+       fetch("https://data.cityofchicago.org/resource/x8fc-8rcq.json").then(res => res.json()).then(data => 
+                                                                                                    {
+            let elem = document.querySelector(".card")
+            for(let i = 0; i < data.length; i++)
+                 {
+                      let newcard = elem.cloneNode(true)
+                      elem.parentNode.append(newcard)
+ 
+                      newcard.querySelector(".name")
+                      .innerText = data[i].name_
+                      
+                      newcard.querySelector(".hours_of_operation")
+                      .innerText = data[i].hours_of_operation
+                      
+                      newcard.querySelector(".address")
+                      .innerText = data[i].address
+                      
+                      newcard.querySelector(".city")
+                      .innerText = data[i].city + ", " +
+                      data[i].state + " "
+                      +data[i].zip
+                      
+                      //newcard.querySelector(".state")          
+                      //newcard.querySelector(".zip")
+                      
+                      
+                      newcard.querySelector(".phone")
+                      .innerText = data[i].phone
+                      
+                      newcard.querySelector(".website")
+                      .href = data[i].website.url    
+                      newcard.querySelector(".website")
+                      .innerText = "Website"
+                      
+                      //let link = newcard.querySelector(".website")
+                      //link.href=data[i].website.url
+                      //link.innerText="Website"
+                      
+                 }
+            elem.remove(".card");
+            
+       }
+                                                                                                   )
+          
+          
+       
+       
+       
+       
+       </script>
+       
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+      
+       </script>
 
     
   </body>
