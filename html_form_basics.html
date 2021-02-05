@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-       <style>
-            [class | = top] {
-                 background-color: green;
-            }
-            
-       </style>
+  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
@@ -42,6 +37,7 @@
                  <option value = "Wed">Wed</option>
                  <option value = "Fri">Fri</option>                 
             </select>
+            <p id = "result"></p>
             <br><br>            
 <!-- add a textarea element with the name and id textarea1, with placeholder
              Please provide any additional feedback-->
@@ -63,9 +59,9 @@ It is difficult to get a man to understand something, when his salary depends up
 <!--1.set the value of the text input to your name-->         
          let name = document.querySelector("#text1").value = "Haeun Kim";          
 <!--2. select the radio button with the value green-->
-         
+         document.querySelector("input[value='green']" )
          function check() {
-              document.querySelector("#red").checked = true;
+              document.querySelector("input[value='green']").checked = true;
          }
          function uncheck() {
               document.querySelector("#red").checked = false;
@@ -73,19 +69,23 @@ It is difficult to get a man to understand something, when his salary depends up
            
            
 <!--3. set the value of the textarea element to be the quotation(byreading the value of the paragraph element)-->
-           
+         let i = document.querySelector("#uptonSinclairQuote")
+         let text = document.querySelector("#textarea1") 
+         text.value = i.innerText;
+
+
            
            
 <!--4. add a change event handler on the select control; the function should log the selected value to the console-->
 <!--(we can write a selector for the checked/selected option in a select control:  select option: checked The way to interpret that is find a checked option element that is the child of a select element You can use an id selector instead of select in the above.  -->
-          const input = document.querySelector("#select1");
          
-         input.addEventListener('change', (event) => { console.log(input.value) });
-           //console.log(input.value);   
-           //input.addEventListener('change', output);
-           //function output(e) {console.log(input.value) };
+         var t = document.querySelector("#select1");
+         t.addEventListener('change', function(event) { 
+              console.log(event.target.value); 
+         });
 
-                    
+
+
            
            
 
