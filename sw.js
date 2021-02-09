@@ -2,7 +2,7 @@
 
 let CACHE_NAME = 'my-site-cache-v1';
 let urlsToCache = [
-  '/'
+  '/https://hkim484.github.io/sw.js'
 ];
 
 
