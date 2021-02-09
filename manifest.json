@@ -2,7 +2,7 @@
     "theme_color": "#690505",
     "background_color": "#690505",
     "display": "standalone",
-    "scope": "./sw./",
+    "scope": "./sw.js",
     "start_url": "/lab5.html",
     "app_name": "Lab5",
     "short_name": "Emp Search",
