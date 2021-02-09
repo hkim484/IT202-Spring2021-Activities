@@ -2,7 +2,7 @@
 
 let CACHE_NAME = 'my-site-cache-v1';
 let urlsToCache = [
-  '/https://hkim484.github.io/IT202-Spring2021-activities/'
+  './https://github.com/hkim484/IT202-Spring2021-activities.git'
 ];
 
 
