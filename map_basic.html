@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+     <head>
+          <title>Haeun's MAP</title>
+          
+          <style type = "text/css">
+               #map { 
+                    height: 100%; 
+               } 
+               html, 
+               body { 
+                    height: 100%; margin: 0; padding: 0; 
+               }          
+          </style>
+          <script>
+               let map;
+               
+               function initMap() {
+                    const myHome = { lat: 41.99297254077168, lng: -88.17699254611324}; 
+                    map = new google.maps.Map(document.querySelector("#map"), {
+                         center: myHome, 
+                         zoom: 8,
+                    });
+                    
+                    let marker = new google.maps.Marker({
+                         position: myHome,
+                         map: map
+                    });
+                    
+                    let infowindow = new google.maps.InfoWindow({
+                         content: "MyHome"
+                         
+                    });
+                    
+                    marker.addListener("click", () => {
+                         infowindow.open(map, marker);
+                    });
+               }                     
+          
+                   
+          
+          </script>
+     </head>
+     <body>
+          <div id = "map"></div>
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-iVMwd1SGiaF8u78mip41RTLBWI13-0A&callback=initMap">
+               
+          
+          </script>
+     </body>
+     
+</html>
+
+
+
+
